@@ -1,0 +1,12 @@
+services:
+  dot:
+    build: .
+    image: dot:latest
+    container_name: dot
+    hostname: dot
+    volumes:
+      - ./target:/target
+    environment:
+      USER: myuser
+    tty: true
+    entrypoint: bash
