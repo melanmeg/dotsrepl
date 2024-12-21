@@ -28,9 +28,3 @@ cargo build --release --target=aarch64-unknown-linux-musl
 RUSTFLAGS="-C linker=aarch64-linux-gnu-gcc" cargo build --release --target=aarch64-unknown-linux-musl
 cp -a ./target/aarch64-unknown-linux-musl/release/dotfiles ../.bin/dotfiles_arm
 ```
-
-### Swich binary
-
-```bash
-rm -f ../.bin/dotfiles && cp -a ./target/x86_64-unknown-linux-musl/release/dotfiles ../.bin/
-```
