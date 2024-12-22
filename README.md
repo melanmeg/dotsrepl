@@ -1,4 +1,4 @@
-# dotsrepl
+# dotfiles replace
 
 ## これは何？
 

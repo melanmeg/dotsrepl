@@ -11,3 +11,9 @@ clap = { version = "4.5.9", features = ["derive"] }
 termcolor = "1.4.1"
 shellexpand = "3.1.0"
 dirs = "5.0.1"
+
+[profile.release]
+opt-level = 3       # 最高レベルの最適化
+lto = true          # リンク時最適化
+codegen-units = 1   # 単一コード生成ユニット
+strip = true        # バイナリサイズ削減
