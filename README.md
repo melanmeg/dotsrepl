@@ -1,8 +1,26 @@
 # dotsrepl
 
-## Develop
+## これは何？
 
-### Rust
+- 現在のディレクトリのドットファイルをホームディレクトリに設置する
+- その際にバックアップも取れる
+
+## インストール
+
+```bash
+PACKAGE_NAME=dotsrepl
+sudo curl -Lo "$HOME/.local/bin/$PACKAGE_NAME" https://github.com/melanmeg/dotsrepl/releases/download/v1.0/dotfiles-1.0-x86_64-unknown-linux-musl
+sudo chown "$USER:$USER" "$HOME/.local/bin/$PACKAGE_NAME"
+sudo chmod +x "$HOME/.local/bin/$PACKAGE_NAME"
+```
+
+## 使い方
+
+```bash
+
+```
+
+## 開発
 
 ```bash
 # pre-setting
@@ -24,7 +42,5 @@ cargo build --release --target=x86_64-unknown-linux-musl
 # arm用作成
 sudo apt install -y gcc-aarch64-linux-gnu
 rustup target add aarch64-unknown-linux-musl
-cargo build --release --target=aarch64-unknown-linux-musl
 RUSTFLAGS="-C linker=aarch64-linux-gnu-gcc" cargo build --release --target=aarch64-unknown-linux-musl
-cp -a ./target/aarch64-unknown-linux-musl/release/dotfiles ../.bin/dotfiles_arm
 ```
