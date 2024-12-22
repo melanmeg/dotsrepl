@@ -7,6 +7,9 @@ use handlers::cmd_handler::run_cmd;
 #[derive(Debug, Parser)]
 #[command(version, about, long_about = None)]
 struct Args {
+    /// Path to dotfiles
+    #[arg(short, long)]
+    path: String,
     /// Force overwrite
     #[arg(short, long)]
     force: bool,
@@ -27,7 +30,7 @@ fn main() {
 }
 
 fn install_handler(args: Args) {
-    link_to_homedir(args.force, args.backup, args.link);
+    link_to_homedir(args.path, args.force, args.backup, args.link);
     println!("");
 
     if args.gitconfig_shared {

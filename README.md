@@ -17,6 +17,21 @@ sudo chmod +x "$HOME/.local/bin/$PACKAGE_NAME"
 ## 使い方
 
 ```bash
+$ dotsrepl -h
+Rust CLI for Dotfiles.
+
+Usage: dotsrepl [OPTIONS]
+
+Options:
+  -f, --force             Force overwrite
+  -b, --backup            Backup dotfiles
+  -l, --link              Link to homedir
+  -g, --gitconfig-shared  git config (.gitconfig_shared)
+  -h, --help              Print help
+  -V, --version           Print version
+```
+
+```bash
 
 ```
 
